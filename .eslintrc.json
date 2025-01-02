@@ -1,0 +1,83 @@
+{
+  "extends": [
+    // "@tencent/eslint-config-tencent",
+    // "@tencent/eslint-config-tencent/ts"
+    "eslint-config-airbnb-base",
+    "plugin:@typescript-eslint/recommended",
+    "@vue/typescript/recommended",
+    "plugin:vue/vue3-recommended",
+    "plugin:prettier/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "globals": {
+    "defineProps": "readonly",
+    "defineEmits": "readonly"
+  },
+  "plugins": ["vue", "@typescript-eslint"],
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "sourceType": "module",
+    "allowImportExportEverywhere": true,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "import/extensions": [".js", ".jsx", ".ts", ".tsx"]
+  },
+  "rules": {
+    "vue/no-unused-components": 1,
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
+    "import/first": "off", // https://github.com/vuejs/vue-eslint-parser/issues/58
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+
+    "consistent-return": "off",
+    "no-plusplus": "off",
+    "no-restricted-syntax": "off",
+    "no-use-before-define": "off",
+    "no-empty": "off",
+    "no-console": "off",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "error",
+
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "name": "lodash",
+            "message": "不要使用 lodash，请使用 lodash-es 作为替代"
+          }
+        ]
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.vue"],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": [1, { "args": "none" }],
+        "vue/multi-word-component-names": 0,
+        "vue/no-v-html": 0,
+        "no-undef": "off"
+      }
+    },
+    {
+      "files": ["*.d.ts"],
+      "rules": {
+        "camelcase": "off"
+      }
+    }
+  ]
+}
