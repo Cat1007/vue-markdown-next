@@ -1,0 +1,29 @@
+/* 使用 TDesign 覆盖文档主题 */
+:root {
+  --vp-c-gray-1: #dddde3;
+  --vp-c-gray-2: #e4e4e9;
+  --vp-c-gray-3: #ebebef;
+  --vp-c-gray-soft: rgba(142, 150, 170, 0.14);
+
+  --vp-c-indigo-1: var(--td-brand-color);
+  --vp-c-indigo-2: var(--td-brand-color-hover);
+  --vp-c-indigo-3: var(--td-brand-color);
+  --vp-c-indigo-soft: var(--td-brand-color-light);
+
+  --vp-c-green-1: var(--td-success-color);
+  --vp-c-green-2: var(--td-success-color-hover);
+  --vp-c-green-3: var(--td-success-color);
+  --vp-c-green-soft: var(--td-success-color-light);
+
+  --vp-c-yellow-1: var(--td-warning-color);
+  --vp-c-yellow-2: var(--td-warning-color-hover);
+  --vp-c-yellow-3: var(--td-warning-color);
+  --vp-c-yellow-soft: var(--td-warning-color-light);
+
+  --vp-c-red-1: var(--td-error-color);
+  --vp-c-red-2: var(--td-error-hover);
+  --vp-c-red-3: var(--td-error-color);
+  --vp-c-red-soft: var(--td-error-color-light);
+
+  --vp-c-sponsor: #db2777;
+}

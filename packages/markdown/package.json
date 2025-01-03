@@ -2,13 +2,44 @@
   "name": "vue-markdown-next",
   "version": "0.0.1",
   "description": "Vue component to render markdown.",
-  "main": "index.js",
   "repository": {
     "url": "https://github.com/Cat1007/vue-markdown-next"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "vite build && vue-tsc --declaration --emitDeclarationOnly --p tsconfig.build.json"
   },
+  "module": "./lib/vue-markdown-next.mjs",
+  "main": "./lib/vue-markdown-next.js",
+  "exports": {
+    ".": {
+      "import": "./lib/vue-markdown-next.mjs",
+      "require": "./lib/vue-markdown-next.js",
+      "types": "./lib/index.d.ts"
+    }
+  },
+  "files": [
+    "lib"
+  ],
   "author": "Cat1007",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/hast": "^3.0.4",
+    "@types/mdast": "^4.0.4",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vitejs/plugin-vue-jsx": "^4.1.1",
+    "hast-util-to-jsx-runtime": "^2.3.2",
+    "html-url-attributes": "^3.0.1",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.1",
+    "typescript": "5.4.2",
+    "unified": "^11.0.5",
+    "unist-util-visit": "^5.0.0",
+    "vfile": "^6.0.3",
+    "vite": "^6.0.6",
+    "vue": "^3.5.13",
+    "vue-tsc": "^2.2.0"
+  },
+  "peerDependencies": {
+    "vue": ">=3.3.0"
+  }
 }
