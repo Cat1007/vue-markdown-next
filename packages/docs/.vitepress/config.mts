@@ -7,7 +7,7 @@ import { TDesignResolver } from 'unplugin-vue-components/resolvers';
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: 'Vue Markdown Next',
-  description: 'A VitePress Site',
+  base: '/vue-markdown-next/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [{ text: 'Home', link: '/' }],

@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "components:publish": "cd ./packages/markdown && pnpm publish",
+    "components:build": "cd ./packages/markdown && pnpm run build",
+    "docs:build": "cd ./packages/docs && pnpm run build"
   },
   "keywords": [],
   "author": "",
