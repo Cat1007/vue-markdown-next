@@ -4,22 +4,18 @@ layout: home
 
 hero:
   name: "Vue Markdown Next"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  tagline: Vue component to render markdown.
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Get started
+      link: /guide/
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Type Strong
+    details: Written in TypeScript, with full TS docs
+  - title: Components
+    details: pass your own component to use instead of html element
+  - title: Plugins
+    details: base on remark.js, many plugins you can pick and choose from
 ---
 

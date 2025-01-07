@@ -10,22 +10,24 @@ export default defineConfig({
   description: 'A VitePress Site',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' },
-    ],
+    nav: [{ text: 'Home', link: '/' }],
 
     sidebar: [
       {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' },
-        ],
+        text: 'Guide',
+        items: [{ text: 'Get Started', link: '/guide/' }],
+      },
+      {
+        text: 'Example',
+        items: [{ text: 'Components', link: '/example/components' }],
+      },
+      {
+        text: 'API',
+        items: [{ text: 'Props', link: '/api/' }],
       },
     ],
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/Cat1007/vue-markdown-next' }],
   },
   vite: {
     plugins: [
