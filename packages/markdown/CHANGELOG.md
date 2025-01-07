@@ -1,5 +1,11 @@
 # vue-markdown-next
 
+## 0.1.1
+
+### Patch Changes
+
+- ad6ed01: add readme
+
 ## 0.1.0
 
 ### Minor Changes
