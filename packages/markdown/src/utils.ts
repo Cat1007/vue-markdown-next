@@ -1,4 +1,4 @@
-const safeProtocol = /^(https?|ircs?|mailto|xmpp)$/i;
+const safeProtocol = /^(https?|ircs?|mailto|xmpp|data)$/i;
 
 export function defaultUrlTransform(value: string) {
   // Same as:
