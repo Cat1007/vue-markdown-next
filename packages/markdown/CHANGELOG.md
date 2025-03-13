@@ -1,5 +1,11 @@
 # vue-markdown-next
 
+## 0.1.3
+
+### Patch Changes
+
+- 8facdb1: fix: add data: as safe protocol to support mermaid
+
 ## 0.1.2
 
 ### Patch Changes
