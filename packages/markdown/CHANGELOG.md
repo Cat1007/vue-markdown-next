@@ -1,5 +1,11 @@
 # vue-markdown-next
 
+## 0.1.2
+
+### Patch Changes
+
+- f8a4a9b: fix: support async rehype plugin
+
 ## 0.1.1
 
 ### Patch Changes
