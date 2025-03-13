@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "components:publish": "cd ./packages/markdown && pnpm publish",
+    "components:publish": "cd ./packages/markdown && pnpm publish --no-git-checks",
     "components:build": "cd ./packages/markdown && pnpm run build",
     "docs:build": "cd ./packages/docs && pnpm run build"
   },
