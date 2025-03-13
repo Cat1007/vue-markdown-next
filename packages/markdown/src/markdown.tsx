@@ -9,6 +9,7 @@ import { VFile } from 'vfile';
 import { computed, defineComponent, PropType, shallowRef, watch, h } from 'vue';
 import { Fragment, JSX } from 'vue/jsx-runtime';
 import { Root as HastRoot, Element, Parents } from 'hast';
+import { computedAsync } from '@vueuse/core';
 import { defaultUrlTransform } from './utils';
 
 // 替换 vue3 中的实现，vue3 实现后续参数中不存在 children，渲染函数无法处理 children 的渲染
@@ -123,7 +124,7 @@ export default defineComponent({
       },
     );
 
-    const renderTree = computed(() => {
+    const renderTree = computedAsync(async () => {
       const file = new VFile();
 
       // 检测类型
@@ -139,7 +140,7 @@ export default defineComponent({
       }
 
       const mdAstTree = processor.value.parse(file);
-      let hastTree = processor.value.runSync(mdAstTree, file);
+      let hastTree = await processor.value.run(mdAstTree, file);
 
       if (props.className) {
         hastTree = {
@@ -226,17 +227,21 @@ export default defineComponent({
 
     // 返回渲染函数结果
     return () =>
-      toJsxRuntime(renderTree.value, {
-        Fragment,
-        components: {
-          ...props.components,
-          ...componentsWithSlot.value,
-        },
-        ignoreInvalidStyle: true,
-        jsx: jsxWithChildren,
-        jsxs: jsxWithChildren,
-        passKeys: true,
-        passNode: true,
-      });
+      renderTree.value ? (
+        toJsxRuntime(renderTree.value, {
+          Fragment,
+          components: {
+            ...props.components,
+            ...componentsWithSlot.value,
+          },
+          ignoreInvalidStyle: true,
+          jsx: jsxWithChildren,
+          jsxs: jsxWithChildren,
+          passKeys: true,
+          passNode: true,
+        })
+      ) : (
+        <></>
+      );
   },
 });

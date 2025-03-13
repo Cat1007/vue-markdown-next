@@ -1,5 +1,9 @@
 <template>
-  <Markdown :content="testContent" :components="components">
+  <Markdown
+    :content="testContent"
+    :components="components"
+    :rehype-plugins="[[rehypeMermaid, { strategy: 'img-png' }]]"
+  >
     <template #hr>
       <t-divider align="left">Using TDesign Divider</t-divider>
     </template>
@@ -15,6 +19,7 @@
 <script setup>
 import { Markdown, VNodeRenderer } from 'vue-markdown-next';
 import { Divider as TDivider } from 'tdesign-vue-next';
+import rehypeMermaid from 'rehype-mermaid';
 import { components } from './components';
 
 const testContent = `
@@ -24,6 +29,15 @@ const testContent = `
 This is [an example](http://example.com/ "Title") inline link.
 
 <http://example.com/>
+
+\`\`\`mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+\`\`\`
+
 
 - Red
 - Green

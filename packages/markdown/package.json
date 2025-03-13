@@ -28,6 +28,7 @@
     "@types/mdast": "^4.0.4",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vitejs/plugin-vue-jsx": "^4.1.1",
+    "@vueuse/core": "^12.7.0",
     "hast-util-to-jsx-runtime": "^2.3.2",
     "html-url-attributes": "^3.0.1",
     "remark-parse": "^11.0.0",
