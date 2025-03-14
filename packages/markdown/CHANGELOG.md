@@ -1,5 +1,11 @@
 # vue-markdown-next
 
+## 0.1.4
+
+### Patch Changes
+
+- 18d3605: fix: inline svg attr support
+
 ## 0.1.3
 
 ### Patch Changes
