@@ -234,6 +234,7 @@ export default defineComponent({
             ...props.components,
             ...componentsWithSlot.value,
           },
+          elementAttributeNameCase: 'html',
           ignoreInvalidStyle: true,
           jsx: jsxWithChildren,
           jsxs: jsxWithChildren,
